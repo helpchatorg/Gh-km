@@ -2613,9 +2613,9 @@
             <h3 style="margin:0 0 10px; font-family:'Sora',sans-serif; font-size:1.02rem; color:var(--dark);">Step <span id="video-ekyc-step-num">1</span> of <span id="video-ekyc-total-steps">4</span></h3>
             <div class="vekyc-progress-dots" id="video-ekyc-dots"></div>
             <div class="vekyc-rules-strip" id="video-ekyc-rules-strip">
-                <div class="r"><span class="ic">👤</span><span>अकेले रहें और पूरे सेशन के दौरान कैमरा फ्रेम में दिखते रहें — फ्रेम से हटने पर eKYC फेल हो जाएगा।</span></div>
-                <div class="r"><span class="ic">🚫</span><span>स्क्रीन पर किसी भी समय कोई दूसरा व्यक्ति दिखाई नहीं देना चाहिए।</span></div>
-                <div class="r"><span class="ic">🔇</span><span>अपने आसपास शांति रखें — बैकग्राउंड शोर या किसी और की आवाज़ आने पर eKYC फेल हो जाएगा।</span></div>
+                <div class="r"><span class="ic">👤</span><span>Stay alone and visible in frame for the entire session — stepping away fails eKYC.</span></div>
+                <div class="r"><span class="ic">🚫</span><span>No other person should appear on screen at any point.</span></div>
+                <div class="r"><span class="ic">🔇</span><span>Keep your surroundings quiet — background noise or other voices will fail eKYC.</span></div>
             </div>
             <div class="vekyc-sig-instructions" id="video-ekyc-id-instructions" style="display:none;">
                 <div class="r"><span class="ic">🪪</span><span>Hold up your <strong>Government ID document</strong> clearly, filling most of the frame.</span></div>
@@ -2640,10 +2640,10 @@
                 <div id="video-ekyc-avatar" title="Your AI assistant">👩</div>
                 <div class="vekyc-ai-bubble" id="video-ekyc-ai-bubble" style="flex:1; margin-top:0;">🤖 Preparing your questions…</div>
             </div>
-            <button type="button" onclick="vekycRepeatSpeech()" style="background:#eef2ff; color:#4338ca; font-weight:800; font-size:0.75rem; padding:8px 12px; margin:8px 0 10px; display:flex; align-items:center; gap:6px;">🔊 एक बार फिर दोहराएँ</button>
+            <button type="button" onclick="vekycRepeatSpeech()" style="background:#eef2ff; color:#4338ca; font-weight:800; font-size:0.75rem; padding:8px 12px; margin:8px 0 10px; display:flex; align-items:center; gap:6px;">🔊 Repeat Once Again</button>
             <div class="input-group" id="video-ekyc-answer-row">
-                <label>आपका उत्तर</label>
-                <input type="text" id="video-ekyc-answer-input" placeholder="अपना उत्तर यहाँ लिखें">
+                <label>Your Answer</label>
+                <input type="text" id="video-ekyc-answer-input" placeholder="Type your answer here">
             </div>
             <div id="video-ekyc-code-row" style="display:none;">
                 <div class="vekyc-code-display" id="video-ekyc-code-display">000000</div>
@@ -3329,31 +3329,31 @@
                     </button>
                     <div class="admin-dropdown" id="admin-dropdown">
                         <div class="admin-dropdown-item" onclick="closeAdminMenu(); switchTab('lostfound-sec', document.querySelector('#admin-bottom-nav .nav-item')); renderLostFoundAdmin();">
-                             &#128269; Lost &amp; Found <span class="admin-menu-notif-dot" id="admin-lostfound-notif-dot" style="display:none;"></span>
+                            🔍 Lost &amp; Found <span class="admin-menu-notif-dot" id="admin-lostfound-notif-dot" style="display:none;"></span>
                         </div>
                         <div class="admin-dropdown-divider"></div>
                         <div class="admin-dropdown-item" onclick="closeAdminMenu(); switchTab('waitinglist-sec', document.querySelector('#admin-bottom-nav .nav-item')); renderWaitingListAdmin();">
-                             &#9203; Waiting List <span class="admin-menu-notif-dot" id="admin-waitlist-notif-dot" style="display:none;"></span>
-                        </div>
-                        <div class="admin-dropdown-divider"></div>
-                        <div class="admin-dropdown-item" onclick="closeAdminMenu(); openGrantSuperAdminAccess()">
-                             &#128275; Access Requests <span class="admin-menu-notif-dot" id="admin-accessreq-notif-dot" style="display:none;"></span>
+                            ⏳ Waiting List <span class="admin-menu-notif-dot" id="admin-waitlist-notif-dot" style="display:none;"></span>
                         </div>
                         <div class="admin-dropdown-divider"></div>
                         <div class="admin-dropdown-item" onclick="closeAdminMenu(); openExportBackupModal();">
-                             &#128190; Export &amp; Backup 
+                            💾 Export &amp; Backup
+                        </div>
+                        <div class="admin-dropdown-divider"></div>
+                        <div class="admin-dropdown-item" onclick="closeAdminMenu(); openGrantSuperAdminAccess()">
+                            🔓 Access Requests <span class="admin-menu-notif-dot" id="admin-accessreq-notif-dot" style="display:none;"></span>
                         </div>
                         <div class="admin-dropdown-divider"></div>
                         <div class="admin-dropdown-item" onclick="closeAdminMenu(); openAdminSubModal();">
-                             &#128179; Subscription <span class="admin-menu-notif-dot" id="admin-sub-notif-dot" style="display:none;"></span>
+                            💳 Subscription <span class="admin-menu-notif-dot" id="admin-sub-notif-dot" style="display:none;"></span>
                         </div>
                         <div class="admin-dropdown-divider"></div>
                         <div class="admin-dropdown-item" onclick="closeAdminMenu(); openAppFeedbackModal();">
-                             &#128172; Feedback 
+                            💬 Feedback
                         </div>
                         <div class="admin-dropdown-divider"></div>
                         <div class="admin-dropdown-item" onclick="closeAdminMenu(); SamPolicy.openViewer('admin', _loggedInAdminId, _loggedInAdminId);">
-                             &#128220; Policies <span class="admin-menu-notif-dot" id="admin-policies-notif-dot" style="display:none;"></span>
+                            📜 Policies <span class="admin-menu-notif-dot" id="admin-policies-notif-dot" style="display:none;"></span>
                         </div>
                         <div class="admin-dropdown-divider"></div>
                         <div class="admin-dropdown-item admin-dropdown-parent" onclick="toggleAdminSettingSub(event)">
@@ -3370,7 +3370,7 @@
                         </div>
                         <div class="admin-dropdown-divider"></div>
                         <div class="admin-dropdown-item admin-dropdown-logout" onclick="closeAdminMenu(); logoutAdmin()">
-                            &#128682; Logout
+                            Logout
                         </div>
                     </div>
                 </div>
@@ -3534,7 +3534,7 @@
                     <div class="error-msg" id="err-shift-select">Please select a shift plan</div>
                 </div>
                 <button onclick="proceedToSeats()" id="proceedBtn" style="background:var(--selected);">Proceed to Seat Selection →</button>
-                <button type="button" id="csaRegBtn" onclick="openCheckSeatAvailabilityModal()" style="background:#0ea5e9; margin-top:8px;">🔍 Check Seat Availability</button>
+                <button type="button" onclick="openCheckSeatAvailabilityModal()" style="background:#0ea5e9; margin-top:8px;">🔍 Check Seat Availability</button>
             </div>
 
             <div id="seat-selection-step" style="display:none;">
@@ -5001,13 +5001,6 @@
     // Refresh the in-memory wallet for the active library straight from storage. Called before
     // showing/using the balance so a Super Admin top-up made moments ago (even in another tab)
     // is always reflected before the deduction check happens.
-    function subSupersedePending(w) {
-        const pend = (w.chargeRequests || []).filter(r => r.status === 'Pending');
-        if (pend.length < 2) return false;
-        pend.sort((a, b) => new Date(a.requestedAt) - new Date(b.requestedAt));
-        pend.slice(0, -1).forEach(r => { r.status = 'Rejected'; r.decidedAt = new Date().toISOString(); r.decisionReason = 'Auto-rejected: replaced by a newer request'; });
-        return true;
-    }
     function refreshWalletFromStorage() {
         if (!_activeAdminId) return;
         try {
@@ -5015,10 +5008,10 @@
             if (!raw) return;
             const data = JSON.parse(raw);
             wallet = ensureWalletShape(data.wallet);
-            if (subSupersedePending(wallet)) persistWalletOnly();
             if (finalizeWalletClosureIfDue(wallet)) persistWalletOnly();
             if (applyEkycAutoCycle(wallet)) persistWalletOnly();
             if (applySubAutoRenew(wallet)) persistWalletOnly();
+            if (subSupersedePending(wallet)) persistWalletOnly();
         } catch (e) { /* keep whatever is already in memory */ }
     }
 
@@ -8775,7 +8768,8 @@
         const dropdown = document.getElementById('shift');
         dropdown.innerHTML = '<option value="">-- Choose a Shift --</option>';
         config.shifts.forEach(s => { if (!db[s.id]) db[s.id] = []; const t = s.start && s.end ? ` (${s.start}-${s.end})` : ""; dropdown.add(new Option(`${s.name}${t} (₹${s.price})`, s.id)); });
-        saveToLocal(); refreshLibraryIdField(); alert("System Configured Successfully!");
+        refreshLibraryIdField();
+        saveToLocal(); alert("System Configured Successfully!");
         switchTab('booking-sec', document.querySelectorAll('#admin-bottom-nav .nav-item')[1]);
         if (newTotalSeats > oldTotalSeats) autoAllocateSeats('Library Capacity Increased');
     }
@@ -8966,16 +8960,17 @@
         const selectedShiftObj = config.shifts.find(x => x.id === sid);
         if (!selectedShiftObj) return;
         let anyAvailable = false;
-        grid.style.display = 'block';
+        // Section-wise layout (same as "Check Seat Availability"): one card per seat group with its own availability bar and grid.
         const groups = (config.seatGroups && config.seatGroups.length) ? config.seatGroups : [{ suffix: '', capacity: config.totalSeats }];
-        let cursor = 0, totalFree = 0, totalCap = 0;
+        grid.style.display = 'block';
+        let cursor = 0;
         groups.forEach(g => {
             const from = cursor + 1, to = cursor + g.capacity; cursor = to;
             const card = document.createElement('div');
-            card.style.cssText = 'background:#f8fafc; border:1px solid var(--border); border-radius:12px; padding:12px 14px; margin-bottom:10px;';
-            const inner = document.createElement('div'); inner.className = 'seat-grid';
-            inner.style.cssText = 'grid-template-columns:repeat(auto-fill, minmax(52px, 1fr)); gap:8px; margin-top:0;';
-            let free = 0;
+            card.style.cssText = 'background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:10px;';
+            const inner = document.createElement('div');
+            inner.className = 'seat-grid'; inner.style.cssText = 'grid-template-columns:repeat(auto-fill,minmax(42px,1fr));gap:6px;margin-top:0;';
+            let bookedInGroup = 0;
             for (let i = from; i <= to; i++) {
                 const seat = document.createElement('div'); seat.className = 'seat';
                 const booked = students.some(s => {
@@ -8985,9 +8980,9 @@
                     if (!other) return false;
                     return (selectedShiftObj.start < other.end && selectedShiftObj.end > other.start);
                 });
-                if (booked) { seat.classList.add('booked'); seat.innerText = 'X'; }
+                if (booked) { seat.classList.add('booked'); seat.innerText = 'X'; bookedInGroup++; }
                 else {
-                    anyAvailable = true; free++;
+                    anyAvailable = true;
                     seat.innerText = seatLabel(i);
                     seat.onclick = () => {
                         document.querySelectorAll('.seat').forEach(s => s.classList.remove('selected'));
@@ -8999,16 +8994,12 @@
                 if (selectedSeat === i && !booked) seat.classList.add('selected');
                 inner.appendChild(seat);
             }
+            const available = g.capacity - bookedInGroup, pct = g.capacity ? Math.round((bookedInGroup / g.capacity) * 100) : 0;
             const label = g.suffix ? `Group ${g.suffix} (${seatLabel(from)}–${seatLabel(to)})` : `Seats ${from}–${to}`;
-            totalFree += free; totalCap += g.capacity;
-            const pct = g.capacity ? Math.round(((g.capacity - free) / g.capacity) * 100) : 0;
-            card.innerHTML = `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;"><strong style="font-size:0.84rem;">${label}</strong><span style="font-size:0.78rem; font-weight:800; color:${free > 0 ? '#16a34a' : '#dc2626'};">${free} / ${g.capacity} available</span></div><div style="background:#e2e8f0; border-radius:6px; height:8px; overflow:hidden; margin-bottom:10px;"><div style="background:${free > 0 ? '#16a34a' : '#dc2626'}; height:100%; width:${pct}%;"></div></div>`;
+            card.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><strong style="font-size:0.84rem;">${label}</strong><span style="font-size:0.78rem;font-weight:800;color:${available > 0 ? '#16a34a' : '#dc2626'};">${available} / ${g.capacity} available</span></div><div style="background:#e2e8f0;border-radius:6px;height:8px;overflow:hidden;margin-bottom:10px;"><div style="background:${available > 0 ? '#16a34a' : '#dc2626'};height:100%;width:${pct}%;"></div></div>`;
             card.appendChild(inner);
             grid.appendChild(card);
         });
-        const head = document.createElement('div');
-        head.innerHTML = `<div style="display:flex; justify-content:center; gap:16px; margin-bottom:12px; font-size:0.72rem; color:var(--grey);"><span><span style="display:inline-block; width:10px; height:10px; border-radius:3px; background:var(--available); margin-right:4px;"></span>Available</span><span><span style="display:inline-block; width:10px; height:10px; border-radius:3px; background:#fca5a5; margin-right:4px;"></span>Booked</span></div><div style="background:#eef2ff; border:1px solid #c7d2fe; border-radius:12px; padding:12px 14px; margin-bottom:14px; text-align:center;"><div style="font-size:0.72rem; color:var(--grey); font-weight:800; text-transform:uppercase;">Total for ${selectedShiftObj.name}</div><div style="font-size:1.3rem; font-weight:800; color:var(--primary-dark); margin-top:2px;">${totalFree} / ${totalCap} available</div></div>`;
-        grid.insertBefore(head, grid.firstChild);
         // Smart Waiting List: if this shift has zero available seats, offer joining the
         // waiting list instead of blocking registration. Edit mode never shows this since
         // the student already holds a seat.
@@ -10863,7 +10854,7 @@
     const VEKYC_ID_DETECT_INTERVAL_MS = 400;
     const VEKYC_ID_STABLE_NEEDED = 4; // ~1.6s held steady before auto-capture
 
-    function _startVideoEkycNow(mode) {
+    function startVideoEkyc(mode) {
         _vekycMode = mode || 'setup';
         refreshWalletFromStorage();
         _vekycLang = 'en';
@@ -10893,16 +10884,13 @@
     // Government ID + signature = 6) — both the "Step X of Y" header and the purple progress
     // dots read from this same function so they can never drift out of sync with each other.
     function vekycTotalSteps() { return _vekycQuestions.length + 3; }
-    function _vekycBeginAfterIntroReal() {
+    function vekycBeginAfterIntro() {
         document.getElementById('video-ekyc-intro-row').style.display = 'none';
         document.getElementById('video-ekyc-main-content').style.display = 'block';
         // Random assistant each session — never user-chosen, and never the same 1-2 names on repeat.
-        if (_vekycPreAssigned) { _vekycAiGender = _vekycPreAssigned.gender; _vekycAiName = _vekycPreAssigned.name; _vekycPreAssigned = null; }
-        else {
         _vekycAiGender = Math.random() < 0.5 ? 'female' : 'male';
         const pickPool = VEKYC_I18N[_vekycLang].namePool[_vekycAiGender];
         _vekycAiName = pickPool[Math.floor(Math.random() * pickPool.length)];
-        }
         const av = document.getElementById('video-ekyc-avatar');
         if (av) { av.textContent = _vekycAiGender === 'male' ? '👨' : '👩'; av.classList.toggle('male', _vekycAiGender === 'male'); }
         const d = wallet.setup.details || {};
@@ -11845,14 +11833,6 @@ function openWalletEkycCooldownModal() {
     // Super Admin topping it up in another tab) so nothing ever needs a manual page refresh.
     function refreshAllWalletDisplays() {
         refreshWalletFromStorage();
-        try {
-            const subM = document.getElementById('admin-sub-modal');
-            if (subM && subM.classList.contains('modal-open')) renderAdminWalletChargeRequests();
-            document.querySelectorAll('.sub-ask-overlay').forEach(function (ov) {
-                if (!(wallet.chargeRequests || []).some(r => r.id === ov.dataset.reqId && r.status === 'Pending')) ov.remove();
-            });
-            if (typeof subRenderBanner === 'function') subRenderBanner();
-        } catch (e) {}
         if (typeof updateAdminMenuNotifDots === 'function') updateAdminMenuNotifDots();
         const walletModal = document.getElementById('admin-wallet-modal');
         if (walletModal && walletModal.classList.contains('modal-open')) renderAdminWalletModal();
@@ -12005,12 +11985,11 @@ function openWalletEkycCooldownModal() {
                 '<div class="head"><span class="ic">🔄</span> Subscription Renewal Charge Requested</div>' +
                 '<div class="amt">₹' + pending.amount + '</div>' +
                 (pending.plan ? '<div class="note" style="font-weight:800;">📅 ' + pending.plan.name + ' plan — ' + pending.plan.months + ' month' + (pending.plan.months > 1 ? 's' : '') + '</div>' : '') +
-                (pending.plan && pending.plan.discountPercent > 0 ? '<div class="note" style="font-weight:800;color:#166534;">🏷️ ' + pending.plan.discountPercent + '% discount applied (− ₹' + pending.plan.discountAmount + ') on ₹' + pending.plan.listPrice + '</div>' : '') +
                 (pending.plan ? subPlanNote(wallet.subscription, pending.plan, 'admin') : '') +
                 (pending.note ? '<div class="note">' + pending.note + '</div>' : '') +
                 '<div class="meta">Requested by Super Admin — ' + fmtWalletDate(pending.requestedAt) + '</div>' +
                 '<div style="display:flex;gap:8px;">' +
-                    '<button onclick="acceptWalletChargeRequest(\'' + pending.id + '\')" style="background:#16a34a;flex:1;font-size:0.78rem;">✅ Accept &amp; Deduct ₹' + pending.amount + '</button>' +
+                    '<button onclick="acceptWalletChargeRequest(\'' + pending.id + '\')" style="background:#16a34a;flex:1;font-size:0.78rem;">✅ Accept &amp; Deduct</button>' +
                     '<button onclick="rejectWalletChargeRequest(\'' + pending.id + '\')" style="background:#dc2626;flex:1;font-size:0.78rem;">✕ Reject</button>' +
                 '</div>' +
             '</div>';
@@ -12064,6 +12043,15 @@ function subResolveTxn(wallet, h){
     if (!t) { const hd = new Date(h.date).getTime(); t = all.filter(x => x.type === 'debit' && x.chargeType === 'renewal' && x.amount == h.amount).sort((a, b) => Math.abs(new Date(a.date) - hd) - Math.abs(new Date(b.date) - hd))[0]; }
     return t ? t.id : (h.txnId || '—');
 }
+function subAutoText(sub, isAdmin){
+    const price = sub.price ? '₹' + sub.price : 'the plan fee';
+    if (sub.autoRenew) return isAdmin
+        ? 'Your plan renews by itself. On the Next Renewal date ' + price + ' is deducted from your wallet and the plan continues — there is no request to accept. If your balance is low, the wallet may go negative.'
+        : 'Set by the Admin. On the renewal date ' + price + ' is deducted from the Admin\'s wallet automatically, so no renewal request is needed. The balance may go negative if funds are low.';
+    return isAdmin
+        ? 'On the Next Renewal date we send you a renewal request. Accept it to continue — the fee is deducted when you accept. If it is not accepted within 5 days after expiry, new registrations, student work and fees are blocked.'
+        : 'Set by the Admin. On the renewal date the system sends the Admin a renewal request automatically. The Admin must accept it. If it is not accepted within 5 days after expiry, restrictions start on the Admin\'s dashboard.';
+}
 function subCardHtml(sub, isAdmin, wallet){
     if (!sub || !sub.expiresAt) return '<div style="font-size:0.84rem;font-weight:800;color:#0369a1;margin-bottom:6px;">💳 Subscription</div><div style="font-size:0.74rem;color:#64748b;">No active subscription plan yet.</div>' + (isAdmin ? subPolicyHtml() : '');
     const st = subStatus(sub), hist = sub.history || [], on = !!sub.autoRenew;
@@ -12076,30 +12064,32 @@ function subCardHtml(sub, isAdmin, wallet){
     return '<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px;"><strong style="font-size:0.84rem;color:#0369a1;">💳 Subscription — ' + subEsc(sub.planName) + '</strong>' +
         '<span style="font-size:0.64rem;font-weight:800;color:#fff;background:' + st.color + ';padding:3px 10px;border-radius:20px;white-space:nowrap;">' + st.label + '</span></div>' +
         '<div style="font-size:0.74rem;font-weight:700;">Started: ' + subFmt(sub.startedAt) + ' &nbsp;•&nbsp; Next Renewal: ' + subFmt(sub.expiresAt) + '</div>' +
-        '<div style="font-size:0.72rem;color:' + st.color + ';font-weight:800;margin-top:3px;">' + (st.days >= 0 ? st.days + ' day(s) left' : Math.abs(st.days) + ' day(s) pehle expire ho gaya') + '</div>' +
-        '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;background:linear-gradient(135deg,#fff,#f0f9ff);border:1px solid ' + (on ? '#86efac' : '#bae6fd') + ';border-radius:14px;padding:11px 13px;">' +
-            '<div style="min-width:0;"><div style="font-size:0.78rem;font-weight:800;">🔁 Auto-Renewal</div><div style="font-size:0.64rem;color:#64748b;line-height:1.4;margin-top:2px;">' + (on ? 'ON — on the renewal date, ₹' + sub.price + ' is deducted from your wallet automatically and your plan is extended. You do not need to do anything. (Balance may go negative.)' : 'OFF — on the renewal date you will receive a renewal request. Your plan is extended only after you accept it and the amount is deducted.') + '</div></div>' + sw + '</div>' +
+        '<div style="font-size:0.72rem;color:' + st.color + ';font-weight:800;margin-top:3px;">' + (st.days >= 0 ? st.days + ' day(s) left' : Math.abs(st.days) + ' day(s) ago (expired)') + '</div>' +
+        '<div style="margin-top:10px;background:linear-gradient(135deg,#fff,#f0f9ff);border:1px solid ' + (on ? '#86efac' : '#bae6fd') + ';border-radius:14px;padding:11px 13px;">' +
+            '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;"><div style="font-size:0.8rem;font-weight:800;">🔁 Auto-Renewal: <span style="color:' + (on ? '#16a34a' : '#64748b') + ';">' + (on ? 'ON' : 'OFF') + '</span>' + (isAdmin ? '' : ' <span style="font-weight:600;color:#64748b;font-size:0.66rem;">(set by the Admin)</span>') + '</div>' + (isAdmin ? sw : '') + '</div>' +
+            '<div style="font-size:0.68rem;color:#475569;line-height:1.55;margin-top:7px;">' + subAutoText(sub, isAdmin) + '</div></div>' +
         subRestrictLine(sub) +
         (wallet && wallet.balance < 0 && sub.autoNegative ? '<div style="margin-top:8px;background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:10px 12px;font-size:0.68rem;line-height:1.5;color:#991b1b;"><b>⚠️ Why is the wallet balance negative?</b><br>The ' + (sub.autoNegative.kind === 'authority' ? 'renewal accepted by the Super Admin (authority granted by the Admin)' : 'Auto-Renewal') + ' of ₹' + sub.autoNegative.amount + ' (' + subEsc(sub.autoNegative.planName) + ' plan) on ' + subFmt(sub.autoNegative.date) + ' was deducted when the wallet had only ₹' + sub.autoNegative.balanceBefore + ', so the balance went to −₹' + Math.abs(sub.autoNegative.balanceAfter) + '. Please add funds to bring it back above zero.</div>' : '') +
         (hist.length ? '<div style="margin-top:10px;background:#fff;border:1px solid #bae6fd;border-radius:14px;padding:11px 13px;">' +
             '<div style="font-size:0.62rem;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:.05em;">Invoice Number</div>' +
             '<div class="sub-inv-no" style="font-size:0.95rem;font-weight:800;color:#0369a1;font-family:monospace;margin-top:2px;">' + subInvNo(hist[last], last) + '</div>' +
             '<div class="sub-inv-txn" style="font-size:0.66rem;color:#64748b;font-family:monospace;margin-top:2px;word-break:break-all;">Txn ID: ' + subEsc(subResolveTxn(wallet, hist[last])) + '</div>' +
-            (hist.length > 1 ? '<label style="display:block;font-size:0.66rem;font-weight:800;color:#64748b;margin:10px 0 4px;">Purana invoice chunein</label><select onchange="' + upd + '" style="width:100%;padding:9px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:0.72rem;background:#fff;">' + opts + '</select>' : '<select style="display:none;"><option value="' + last + '" selected></option></select>') +
+            (hist.length > 1 ? '<label style="display:block;font-size:0.66rem;font-weight:800;color:#64748b;margin:10px 0 4px;">Select an older invoice</label><select onchange="' + upd + '" style="width:100%;padding:9px;border-radius:10px;border:1.5px solid #e2e8f0;font-size:0.72rem;background:#fff;">' + opts + '</select>' : '<select style="display:none;"><option value="' + last + '" selected></option></select>') +
             '<button style="width:100%;border:none;border-radius:10px;font-weight:800;cursor:pointer;background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;padding:11px;font-size:0.78rem;margin-top:10px;" onclick="subDownloadSelected(this)">⬇️ Download Invoice</button></div>' : '') + (isAdmin ? subPolicyHtml() : '');
 }
 function subDownloadSelected(btn){ subDownloadInvoice(parseInt(btn.parentNode.querySelector('select').value, 10)); }
-function subInvoiceHtml(wallet, libId, h, idx){
+function subInvoiceHtml(wallet, libId, h, idx, cfg){
+    cfg = cfg || {};
     const ps = h.periodStart || h.date, pe = h.periodEnd || (function(){ const d = new Date(ps); d.setMonth(d.getMonth() + (h.months || 1)); d.setDate(d.getDate() - 1); return d.toISOString(); })();
     const no = subInvNo(h, idx), txn = subResolveTxn(wallet, h), isLast = idx === ((wallet.subscription && wallet.subscription.history) || []).length - 1;
     const row = (k, v) => '<tr><td style="color:#64748b;width:45%">' + k + '</td><td><b>' + v + '</b></td></tr>';
     return '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + subEsc(no) + '</title><style>body{font-family:Arial,sans-serif;color:#0f172a;max-width:720px;margin:30px auto;padding:0 20px}h1{margin:0;font-size:1.5rem;color:#0369a1}.top{display:flex;justify-content:space-between;border-bottom:3px solid #0369a1;padding-bottom:14px}.m{font-size:.85rem;line-height:1.7}table{width:100%;border-collapse:collapse;margin-top:18px}th,td{padding:10px;text-align:left;border-bottom:1px solid #e2e8f0;font-size:.88rem}th{background:#f1f5f9}.box td{padding:7px 10px;font-size:.85rem}.t{text-align:right;font-size:1.1rem;font-weight:800;margin-top:16px}.paid{display:inline-block;border:2px solid #16a34a;color:#16a34a;font-weight:800;padding:3px 12px;border-radius:6px;margin-top:8px}.f{margin-top:36px;font-size:.72rem;color:#64748b;text-align:center}@media print{body{margin:0}}</style></head><body>' +
         '<div class="top"><div><h1>Samarthak</h1><div class="m">Subscription Invoice</div></div><div class="m" style="text-align:right"><b style="font-size:1.05rem">' + subEsc(no) + '</b><br>Date: ' + subFmt(h.date) + '<br><span class="paid">PAID</span></div></div>' +
-        '<div class="m" style="margin-top:16px"><b>Billed To</b><br>Admin ID: ' + subEsc(libId) + (wallet.id ? '<br>Wallet UID: ' + subEsc(wallet.id) : '') + (typeof config !== 'undefined' && config && config.libName ? '<br>Library Name: ' + subEsc(config.libName) + (config.address ? '<br>Address: ' + subEsc(config.address) : '') + (config.mobile ? '<br>Mobile: ' + subEsc(config.mobile) : '') + (config.ownerName ? '<br>Owner: ' + subEsc(config.ownerName) : '') : '') + '</div>' +
-        '<table><tr><th>Description</th><th>Period</th><th style="text-align:right">Amount</th></tr><tr><td>' + subEsc(h.planName) + ' Plan (' + h.months + ' month' + (h.months > 1 ? 's' : '') + ')</td><td>' + subFmt(ps) + ' – ' + subFmt(pe) + '</td><td style="text-align:right">₹' + (h.listPrice || h.amount) + '</td></tr></table>' +
+        '<div class="m" style="margin-top:16px"><b>Billed To</b><br>' + (cfg.libName ? '<b>' + subEsc(cfg.libName) + '</b><br>' : '') + (cfg.ownerName ? 'Owner: ' + subEsc(cfg.ownerName) + '<br>' : '') + (cfg.address ? subEsc(cfg.address) + (cfg.pin ? ' – ' + subEsc(cfg.pin) : '') + '<br>' : '') + (cfg.mobile ? 'Mobile: ' + subEsc(cfg.mobile) + '<br>' : '') + 'Admin ID: ' + subEsc(libId) + (wallet.id ? '<br>Wallet UID: ' + subEsc(wallet.id) : '') + '</div>' +
+        '<table><tr><th>Description</th><th>Period</th><th style="text-align:right">Amount</th></tr><tr><td>' + subEsc(h.planName) + ' Plan (' + h.months + ' month' + (h.months > 1 ? 's' : '') + ')</td><td>' + subFmt(ps) + ' – ' + subFmt(pe) + '</td><td style="text-align:right">₹' + h.amount + '</td></tr></table>' +
         '<div class="t">Total Paid: ₹' + h.amount + '</div>' +
-        '<table class="box" style="margin-top:20px">' + row('Plan Price', '₹' + (h.listPrice || h.amount)) + row('Discount Given', (h.discountPercent > 0) ? (h.discountPercent + '% (− ₹' + (h.discountAmount || 0) + ')') : 'No discount (0%)') + row('Percent of Price Paid', (100 - (h.discountPercent || 0)) + '%') + row('Invoice Number', subEsc(no)) + row('Transaction ID', subEsc(txn)) + row('Payment Mode', h.paymentMode === 'Cash' ? 'Cash (received by Super Admin)' : 'Samarthak Wallet') + (h.acceptedBy ? row('Accepted By', subEsc(h.acceptedBy)) : '') + (h.forfeitedDays > 0 ? row('Previous plan days forfeited', h.forfeitedDays + ' day(s) (plan changed)') : '') +
-            row('Auto Renewal', h.auto ? 'Yes — this payment was auto-renewed' : (h.paymentMode === 'Cash' ? 'No — paid in cash, added by Super Admin' : 'No — renewed manually (Admin accepted)')) +
+        '<table class="box" style="margin-top:20px">' + row('Invoice Number', subEsc(no)) + row('Transaction ID', subEsc(txn)) + row('Payment Mode', 'Samarthak Wallet') + (h.acceptedBy ? row('Accepted By', subEsc(h.acceptedBy)) : '') + (h.forfeitedDays > 0 ? row('Previous plan days forfeited', h.forfeitedDays + ' day(s) (plan changed)') : '') +
+            row('Auto Renewal', h.auto ? 'Yes — this payment was auto-renewed' : 'No — renewed manually (Admin accepted)') +
             (isLast && wallet.subscription ? row('Auto-Renewal for next term', wallet.subscription.autoRenew ? 'ON' : 'OFF') : '') + '</table>' +
         '<div class="f">This is a computer-generated invoice and does not require a signature.</div></body></html>';
 }
@@ -12161,7 +12151,7 @@ function subApplyTerm(w, plan, amount, txnId, auto, isAutoCharge){
     if (stack) { start.setTime(new Date(old.expiresAt).getTime()); start.setDate(start.getDate() + 1); start.setHours(0, 0, 0, 0); }
     const end = new Date(start); end.setMonth(end.getMonth() + plan.months); end.setDate(end.getDate() - 1); end.setHours(23, 59, 59, 999);
     const hist = (old && old.history) || [];
-    hist.push({ planName: plan.name, months: plan.months, amount: amount, date: now.toISOString(), txnId: txnId, periodStart: start.toISOString(), periodEnd: end.toISOString(), auto: !!isAutoCharge, forfeitedDays: mode.kind === 'change' ? mode.days : 0, paymentMode: plan.paymentMode || 'Wallet', listPrice: plan.listPrice || plan.price || amount, discountPercent: plan.discountPercent || 0, discountAmount: plan.discountAmount || 0 });
+    hist.push({ planName: plan.name, months: plan.months, amount: amount, date: now.toISOString(), txnId: txnId, periodStart: start.toISOString(), periodEnd: end.toISOString(), auto: !!isAutoCharge, forfeitedDays: mode.kind === 'change' ? mode.days : 0 });
     w.subscription = { planId: plan.id, planName: plan.name, months: plan.months, price: plan.price || amount, autoRenew: !!auto, startedAt: stack ? (old.startedAt || start.toISOString()) : start.toISOString(), expiresAt: end.toISOString(), history: hist };
 }
 // Fully automatic renewal on the Next Renewal date (Auto-Renew ON). Uses the Super Admin's CURRENT plan definition (so plan edits apply),
@@ -12193,6 +12183,15 @@ function subAutoRequestCore(w){
     s.autoRequestedFor = s.expiresAt;
     return true;
 }
+// Only the newest pending renewal request stays pending; older unaccepted ones are rejected automatically.
+function subSupersedePending(w){
+    const p = (w.chargeRequests || []).filter(r => r.status === 'Pending' && r.type === 'renewal');
+    if (p.length < 2) return false;
+    p.sort((a, b) => new Date(a.requestedAt) - new Date(b.requestedAt));
+    const now = new Date().toISOString();
+    p.slice(0, -1).forEach(r => { r.status = 'Rejected'; r.decidedAt = now; r.decisionReason = 'Replaced automatically by a newer renewal request'; r.superseded = true; });
+    return true;
+}
 // A direct renewal debit that is already represented by a charge request must not be listed twice.
 function subDedupeDirect(wallet, directEntries){
     const reqs = (wallet.chargeRequests || []).filter(r => r.status === 'Approved');
@@ -12215,7 +12214,7 @@ function subShowRenewalAlert(adminId){
             '<div style="font-weight:800;font-size:.95rem;margin:6px 0;line-height:1.4;">' + head + '</div>' +
             '<div style="font-size:.76rem;color:#475569;line-height:1.55;">To keep your renewal smooth, please maintain sufficient balance in your wallet.</div>' +
             '<div style="font-size:.7rem;color:#64748b;line-height:1.5;margin-top:8px;">Next Renewal: <b>' + subFmt(sub.expiresAt) + '</b><br>' + (sub.autoRenew ? '🔁 Auto-renewal is ON — ₹' + sub.price + ' will be deducted from your wallet automatically (the balance may go negative if funds are insufficient).' : 'Auto-renewal is OFF — a renewal request is sent to you automatically on the renewal date. Accept it from Manage Subscription.') + '</div>' +
-            '<div style="display:flex;gap:8px;margin-top:16px;"><button id="sub-al-x" style="flex:1;padding:11px;border-radius:10px;border:1.5px solid #e2e8f0;background:#fff;font-weight:800;cursor:pointer;">Later</button><button id="sub-al-w" style="flex:1.4;padding:11px;border-radius:10px;border:none;background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;font-weight:800;cursor:pointer;">💳 Manage Subscription</button></div></div>';
+            '<div style="display:flex;gap:8px;margin-top:16px;"><button id="sub-al-x" style="flex:1;padding:11px;border-radius:10px;border:1.5px solid #cbd5e1;background:#fff;color:#334155;font-weight:800;cursor:pointer;">Later</button><button id="sub-al-w" style="flex:1.4;padding:11px;border-radius:10px;border:none;background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;font-weight:800;cursor:pointer;">💳 Manage Subscription</button></div></div>';
         document.body.appendChild(o);
         o.querySelector('#sub-al-x').onclick = function(){ o.remove(); };
         o.querySelector('#sub-al-w').onclick = function(){ o.remove(); openAdminSubModal(); };
@@ -12275,38 +12274,43 @@ function subEnforceLock(){
     if (!ov) subShowLockScreen(_loggedInAdminId);
 }
 setInterval(function(){ if (_loggedInAdminId) { try { refreshWalletFromStorage(); } catch (e) {} subEnforceLock(); } }, 30000);
-// Instant sync: detect any change in this library's stored data (Super Admin actions, auto-renew, auto-sent requests) and redraw without a page refresh.
-var _subLiveSig = '';
-setInterval(function(){
+// ===== LIVE SYNC: Super Admin actions (new/replaced requests, authority, plan changes) appear here instantly, no refresh needed =====
+let _subLiveRaw = null;
+function subLiveSync(){
     if (!_loggedInAdminId || !_activeAdminId) return;
+    let raw = null; try { raw = localStorage.getItem(activeDbKey()); } catch (e) { return; }
+    if (_subLiveRaw === null) { _subLiveRaw = raw; return; }
+    if (raw === _subLiveRaw) return;
+    _subLiveRaw = raw;
     try {
-        const raw = localStorage.getItem(activeDbKey()) || '';
-        const sig = raw.length + ':' + (JSON.parse(raw || '{}').wallet ? JSON.stringify(JSON.parse(raw).wallet).length : 0);
-        if (sig !== _subLiveSig) { _subLiveSig = sig; refreshAllWalletDisplays(); }
+        refreshWalletFromStorage();
+        _subLiveRaw = localStorage.getItem(activeDbKey());
+        refreshAllWalletDisplays();
+        const m = document.getElementById('admin-sub-modal');
+        if (m && m.classList.contains('modal-open')) renderAdminWalletChargeRequests();
+        updateAdminMenuNotifDots();
+        subEnforceLock();
     } catch (e) {}
-}, 1500);
+}
+window.addEventListener('storage', function(e){ if (!e.key || e.key === activeDbKey()) { _subLiveRaw = _subLiveRaw === null ? '' : _subLiveRaw + ' '; subLiveSync(); } });
+setInterval(subLiveSync, 1500);
 function subToggleAuto(){
     if (!wallet || !wallet.subscription) return;
-    const turningOn = !wallet.subscription.autoRenew;
-    requireWalletUnlock({ title: '🔐 U-PIN Required', desc: 'Enter your U-PIN to turn Auto-Renewal ' + (turningOn ? 'ON' : 'OFF') + '.' }, function(){
-        if (!wallet || !wallet.subscription) return;
-        wallet.subscription.autoRenew = turningOn;
-        persistWalletOnly(); refreshAllWalletDisplays();
-    });
+    wallet.subscription.autoRenew = !wallet.subscription.autoRenew;
+    persistWalletOnly(); refreshAllWalletDisplays();
 }
 function subDownloadInvoice(idx){
     const h = wallet && wallet.subscription && wallet.subscription.history && wallet.subscription.history[idx];
-    if (!h) { alert('❌ Invoice data nahi mila.'); return; }
-    subOpenInvoice(subInvoiceHtml(wallet, _activeAdminId, h, idx), 'Invoice_' + (h.txnId || idx) + '.html');
+    if (!h) { alert('❌ Invoice data not found.'); return; }
+    subOpenInvoice(subInvoiceHtml(wallet, _activeAdminId, h, idx, config), 'Invoice_' + (h.txnId || idx) + '.html');
 }
 function subAskAutoRenew(req, cb){
     const o = document.createElement('div');
-    o.className = 'sub-ask-overlay'; o.dataset.reqId = req.id;
     o.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.55);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;';
     o.innerHTML = '<div style="background:#fff;border-radius:18px;padding:20px;max-width:360px;width:100%;box-sizing:border-box;max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;"><div style="font-weight:800;font-size:.95rem;">🔄 Accept Renewal — ₹' + req.amount + '</div>' +
         '<div style="font-size:.78rem;color:#64748b;margin:6px 0 4px;line-height:1.5;">' + subEsc(req.plan.name) + ' plan (' + req.plan.months + ' month' + (req.plan.months > 1 ? 's' : '') + '). This amount will be deducted from your wallet now.</div>' + subPlanNote(wallet && wallet.subscription, req.plan, 'admin') +
-        '<div id="sub-auto-row" style="display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(135deg,#fff,#f0f9ff);border:1px solid #bae6fd;border-radius:14px;padding:12px 14px;"><div><div style="font-size:.82rem;font-weight:800;">🔁 Auto-Renewal</div><div style="font-size:.66rem;font-weight:600;color:#64748b;line-height:1.4;margin-top:2px;">₹' + (req.plan.price || req.amount) + ' will be auto-deducted at expiry (balance may go negative). You can turn it off anytime.</div></div><button type="button" id="sub-auto-sw" role="switch" aria-checked="false" style="flex-shrink:0;position:relative;width:48px;height:27px;border-radius:20px;border:none;padding:0;cursor:pointer;transition:background .25s;background:#cbd5e1;box-shadow:inset 0 1px 3px rgba(0,0,0,.18);"><span id="sub-auto-knob" style="position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.3);transition:left .25s;"></span></button></div>' +
-        '<div style="display:flex;gap:8px;margin-top:14px;"><button id="sub-auto-no" style="flex:1;padding:11px;border-radius:10px;border:1.5px solid #e2e8f0;background:#fff;font-weight:800;cursor:pointer;">Cancel</button><button id="sub-auto-ok" style="flex:2;padding:11px;border-radius:10px;border:none;background:#16a34a;color:#fff;font-weight:800;cursor:pointer;">✅ Accept &amp; Deduct ₹' + req.amount + '</button></div></div>';
+        '<div id="sub-auto-row" style="display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(135deg,#fff,#f0f9ff);border:1px solid #bae6fd;border-radius:14px;padding:12px 14px;"><div><div style="font-size:.82rem;font-weight:800;">🔁 Auto-Renewal</div><div style="font-size:.66rem;font-weight:600;color:#64748b;line-height:1.4;margin-top:2px;">₹' + (req.plan.price || req.amount) + ' is deducted from your wallet on every renewal date and your plan continues — no request to accept. Leave it OFF to receive a renewal request each time. You can change this anytime from Subscription.</div></div><button type="button" id="sub-auto-sw" role="switch" aria-checked="false" style="flex-shrink:0;position:relative;width:48px;height:27px;border-radius:20px;border:none;padding:0;cursor:pointer;transition:background .25s;background:#cbd5e1;box-shadow:inset 0 1px 3px rgba(0,0,0,.18);"><span id="sub-auto-knob" style="position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.3);transition:left .25s;"></span></button></div>' +
+        '<div style="display:flex;gap:8px;margin-top:14px;"><button id="sub-auto-no" style="flex:1;padding:11px;border-radius:10px;border:1.5px solid #cbd5e1;background:#fff;color:#334155;font-weight:800;cursor:pointer;">Cancel</button><button id="sub-auto-ok" style="flex:2;padding:11px;border-radius:10px;border:none;background:#16a34a;color:#ffffff;font-weight:800;font-size:.85rem;cursor:pointer;">✅ Accept &amp; Deduct</button></div></div>';
     document.body.appendChild(o);
     let auto = false; const swb = o.querySelector('#sub-auto-sw'), kn = o.querySelector('#sub-auto-knob');
     swb.onclick = function(){ auto = !auto; swb.setAttribute('aria-checked', auto); swb.style.background = auto ? 'linear-gradient(135deg,#22c55e,#16a34a)' : '#cbd5e1'; kn.style.left = auto ? '24px' : '3px'; };
@@ -13020,7 +13024,7 @@ function subAskAutoRenew(req, cb){
     function editRecord(id) {
         const s = students.find(x => x.id === id);
         switchTab('booking-sec', document.querySelectorAll('#admin-bottom-nav .nav-item')[1]);
-        document.getElementById('editId').value = s.id; { const _cb = document.getElementById('csaRegBtn'); if (_cb) _cb.style.display = 'none'; } document.getElementById('name').value = s.name;
+        document.getElementById('editId').value = s.id; document.getElementById('name').value = s.name;
         document.getElementById('fname').value = s.fname; document.getElementById('mobile').value = s.mobile;
         document.getElementById('email').value = s.email; document.getElementById('shift').value = s.shift;
         document.getElementById('dob').value = s.dob || '';
@@ -13396,7 +13400,7 @@ function subAskAutoRenew(req, cb){
         document.querySelectorAll('#booking-sec input').forEach(i => { i.value=''; i.readOnly=false; });
         document.querySelectorAll('#booking-sec select').forEach(s => s.disabled=false);
         document.getElementById('otherAppName').readOnly = false;
-        document.getElementById('editId').value = ''; { const _cb = document.getElementById('csaRegBtn'); if (_cb) _cb.style.display = ''; } photoData = null; selectedSeat = null;
+        document.getElementById('editId').value = ''; photoData = null; selectedSeat = null;
         document.getElementById('shift').value = ""; document.getElementById('payMethod').value = "Cash";
         document.getElementById('photo-preview-img').style.display = "none";
         document.getElementById('cancelEditBtn').style.display = "none";
@@ -15741,7 +15745,7 @@ function subAskAutoRenew(req, cb){
             rec.status = 'accepted';
             rec.actionAt = now;
             // Admin re-request cooldown and the Super Admin's access window are the same 30 minutes.
-            rec.cooldownUntil = now + (rec.accessMinutes > 0 ? rec.accessMinutes : 30) * 60 * 1000;
+            rec.cooldownUntil = now + 30 * 60 * 1000;
             writeAccessRequests(list);
             localStorage.setItem(SA_IMPERSONATE_KEY, JSON.stringify({
                 adminId: rec.adminId, grantedAt: now, expiresAt: rec.cooldownUntil
@@ -18424,7 +18428,7 @@ The **Library Lost & Found service is provided free of charge**. The Library doe
                 </div>
                 <div class="sc-info-item">
                     <span class="sc-info-icon">⏱️</span>
-                    <span>Unanswered requests expire automatically after 10 minutes. Accepted access stays open for the time chosen by the Super Admin (10–60 minutes).</span>
+                    <span>Unanswered requests expire automatically after 10 minutes. Accepted access stays open for 30 minutes.</span>
                 </div>
             </div>
             <div style="font-size:0.72rem;color:var(--grey);font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;">Request History</div>
@@ -18558,7 +18562,7 @@ The **Library Lost & Found service is provided free of charge**. The Library doe
                 </div>
                 <div class="sc-info-item">
                     <span class="sc-info-icon">⏱️</span>
-                    <span>Unanswered requests expire automatically after 10 minutes. Accepted access stays open for the time chosen by the Super Admin (10–60 minutes).</span>
+                    <span>Unanswered requests expire automatically after 10 minutes. Accepted access stays open for 30 minutes.</span>
                 </div>
             </div>
             <div style="font-size:0.72rem;color:var(--grey);font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px;">Request History</div>
@@ -19417,126 +19421,6 @@ The **Library Lost & Found service is provided free of charge**. The Library doe
   window.SamPolicy._publish = _publish;
 })();
 
-</script>
-
-<script>
-// ===== VIDEO eKYC: "Start Now" / "Schedule" + 5-min reminder + 30-min window + AI assistant assignment =====
-var _vekycPreAssigned = null, _vsAssignTimer = null;
-var VS_WINDOW_MIN = 30, VS_REMIND_MIN = 5;
-function _vsId(){ try { return _activeAdminId || _loggedInAdminId || ''; } catch (e) { return ''; } }
-function _vsKey(){ return 'Samarthak_VekycSchedule_' + _vsId(); }
-function _vsExpKey(){ return 'Samarthak_VekycSchedExpired_' + _vsId(); }
-function _vsGet(){ try { return JSON.parse(localStorage.getItem(_vsKey()) || 'null'); } catch (e) { return null; } }
-function _vsSet(o){ try { if (o) localStorage.setItem(_vsKey(), JSON.stringify(o)); else localStorage.removeItem(_vsKey()); } catch (e) {} }
-function _vsFmt(ms){ return new Date(ms).toLocaleString([], { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); }
-function _vsTime(ms){ return new Date(ms).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
-function _vsPad(n){ return String(n).padStart(2, '0'); }
-
-function startVideoEkyc(mode){ vsOpenChooser(mode || 'setup'); }
-function vsCloseChooser(){ var o = document.getElementById('vs-chooser'); if (o) o.remove(); }
-function vsOpenChooser(mode){
-    vsCloseChooser();
-    var s = _vsGet(), now = Date.now(), info = '';
-    if (s && now <= s.at + VS_WINDOW_MIN * 60000) info = '<div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:10px 12px;font-size:.76rem;font-weight:700;color:#4c1d95;margin-bottom:12px;">📅 Already scheduled: ' + _vsFmt(s.at) + '<br><span style="font-weight:600;">Window: ' + _vsTime(s.at) + ' – ' + _vsTime(s.at + VS_WINDOW_MIN * 60000) + '</span></div>';
-    var d = new Date(Date.now() + 5 * 60000); var minVal = d.getFullYear() + '-' + _vsPad(d.getMonth() + 1) + '-' + _vsPad(d.getDate()) + 'T' + _vsPad(d.getHours()) + ':' + _vsPad(d.getMinutes());
-    var o = document.createElement('div'); o.id = 'vs-chooser';
-    o.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.6);z-index:9600;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;';
-    o.innerHTML = '<div style="background:#fff;border-radius:20px;padding:22px;max-width:380px;width:100%;box-sizing:border-box;max-height:90vh;overflow-y:auto;">' +
-        '<div style="font-weight:800;font-size:1.02rem;text-align:center;">🎥 AI Video eKYC</div>' +
-        '<div style="font-size:.76rem;color:#64748b;text-align:center;margin:6px 0 14px;line-height:1.5;">Choose when you want to complete your Video eKYC.</div>' + info +
-        '<button id="vs-now" style="width:100%;background:#7c3aed;color:#fff;padding:13px;border-radius:12px;font-weight:800;font-size:.9rem;">▶ Start Now</button>' +
-        '<button id="vs-sched" style="width:100%;background:#eef2ff;color:#4338ca;padding:13px;border-radius:12px;font-weight:800;font-size:.9rem;margin-top:8px;">📅 Schedule Video eKYC</button>' +
-        '<div id="vs-sched-panel" style="display:none;margin-top:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px;">' +
-            '<label style="font-size:.74rem;font-weight:800;">Select date &amp; time</label>' +
-            '<input type="datetime-local" id="vs-when" min="' + minVal + '" style="margin-top:6px;">' +
-            '<div style="font-size:.68rem;color:#64748b;line-height:1.5;margin:8px 0;">• You will get a reminder on your dashboard 5 minutes before.<br>• Video eKYC can be done only at the scheduled time and stays open for 30 minutes after it. After that the window expires and you must schedule again or start now.</div>' +
-            '<div id="vs-err" style="display:none;color:#dc2626;font-size:.72rem;font-weight:800;margin-bottom:6px;"></div>' +
-            '<button id="vs-save" style="width:100%;background:#16a34a;color:#fff;padding:11px;border-radius:10px;font-weight:800;">Save Schedule</button>' +
-        '</div>' +
-        '<button id="vs-close" style="width:100%;background:#f1f5f9;color:#334155;padding:11px;border-radius:10px;font-weight:800;margin-top:10px;">Close</button></div>';
-    document.body.appendChild(o);
-    o.querySelector('#vs-close').onclick = vsCloseChooser;
-    o.querySelector('#vs-sched').onclick = function(){ o.querySelector('#vs-sched-panel').style.display = 'block'; };
-    o.querySelector('#vs-now').onclick = function(){ _vsSet(null); try { localStorage.removeItem(_vsExpKey()); } catch (e) {} vsCloseChooser(); vsTick(); _startVideoEkycNow(mode); };
-    o.querySelector('#vs-save').onclick = function(){
-        var v = o.querySelector('#vs-when').value, err = o.querySelector('#vs-err');
-        var at = v ? new Date(v).getTime() : NaN;
-        if (!v || isNaN(at)) { err.style.display = 'block'; err.textContent = 'Please select a date and time.'; return; }
-        if (at < Date.now() + 60000) { err.style.display = 'block'; err.textContent = 'Please select a time in the future.'; return; }
-        _vsSet({ at: at, mode: mode, createdAt: Date.now() }); try { localStorage.removeItem(_vsExpKey()); } catch (e) {}
-        vsCloseChooser(); vsTick();
-        alert('✅ Video eKYC scheduled for ' + _vsFmt(at) + '.\n\nA reminder will appear 5 minutes before. You can start it at that time and it stays open for 30 minutes.');
-    };
-}
-function vsStartScheduled(){
-    var s = _vsGet(); if (!s) return;
-    if (Date.now() < s.at || Date.now() > s.at + VS_WINDOW_MIN * 60000) { vsTick(); return; }
-    _vsSet(null); vsTick(); _startVideoEkycNow(s.mode || 'setup');
-}
-function vsCancelSchedule(){ if (!confirm('Cancel the scheduled Video eKYC?')) return; _vsSet(null); vsTick(); }
-function vsDismissExpired(){ try { localStorage.removeItem(_vsExpKey()); } catch (e) {} vsTick(); }
-function vsScheduleAgain(){ vsDismissExpired(); vsOpenChooser('setup'); }
-function vsTick(){
-    var host = document.getElementById('vs-banner');
-    if (!host) {
-        host = document.createElement('div'); host.id = 'vs-banner';
-        host.style.cssText = 'position:fixed;left:8px;right:8px;top:calc(8px + env(safe-area-inset-top,0px));z-index:9400;display:none;border-radius:14px;padding:11px 13px;font-size:.78rem;font-weight:700;line-height:1.5;box-shadow:0 8px 24px rgba(15,23,42,.25);';
-        document.body.appendChild(host);
-    }
-    var logged = false; try { logged = !!_loggedInAdminId; } catch (e) {}
-    if (!logged) { host.style.display = 'none'; return; }
-    var s = _vsGet(), now = Date.now(), expired = null;
-    try { if (s && s.mode === 'setup' && wallet && wallet.setup && wallet.setup.done) { _vsSet(null); s = null; } } catch (e) {}
-    if (s && now > s.at + VS_WINDOW_MIN * 60000) { try { localStorage.setItem(_vsExpKey(), String(s.at)); } catch (e) {} _vsSet(null); s = null; }
-    if (!s) { try { expired = localStorage.getItem(_vsExpKey()); } catch (e) {} }
-    var btn = 'border:none;border-radius:9px;padding:7px 11px;font-weight:800;font-size:.74rem;margin:6px 6px 0 0;';
-    if (s && now >= s.at) {
-        var left = Math.max(0, Math.ceil((s.at + VS_WINDOW_MIN * 60000 - now) / 60000));
-        host.style.cssText += 'background:#f0fdf4;border:1.5px solid #86efac;color:#14532d;display:block;';
-        host.innerHTML = '🎥 <b>Your scheduled Video eKYC is open now.</b> ' + left + ' min left in this window (till ' + _vsTime(s.at + VS_WINDOW_MIN * 60000) + ').<br><button style="' + btn + 'background:#16a34a;color:#fff;" onclick="vsStartScheduled()">▶ Start Video eKYC</button>';
-    } else if (s && now >= s.at - VS_REMIND_MIN * 60000) {
-        var sec = Math.max(0, Math.ceil((s.at - now) / 1000));
-        host.style.cssText += 'background:#fffbeb;border:1.5px solid #fde68a;color:#78350f;display:block;';
-        host.innerHTML = '⏰ <b>Video eKYC starts in ' + Math.floor(sec / 60) + ':' + _vsPad(sec % 60) + '</b> (at ' + _vsTime(s.at) + '). Please be ready in a quiet, well-lit place — alone.<br><button style="' + btn + 'background:#fff;color:#92400e;border:1px solid #fcd34d;" onclick="vsCancelSchedule()">Cancel schedule</button>';
-    } else if (expired) {
-        var e0 = parseInt(expired, 10);
-        host.style.cssText += 'background:#fef2f2;border:1.5px solid #fecaca;color:#7f1d1d;display:block;';
-        host.innerHTML = '⌛ <b>Your scheduled Video eKYC window has expired.</b><br>The slot ' + _vsTime(e0) + ' – ' + _vsTime(e0 + VS_WINDOW_MIN * 60000) + ' (' + _vsFmt(e0) + ') is over. A scheduled Video eKYC can be completed only within 30 minutes after the scheduled time. Please schedule again, or start now.<br><button style="' + btn + 'background:#7c3aed;color:#fff;" onclick="vsDismissExpired();startVideoEkyc(\'setup\')">▶ Start Now</button><button style="' + btn + 'background:#eef2ff;color:#4338ca;" onclick="vsScheduleAgain()">📅 Schedule again</button><button style="' + btn + 'background:#fff;color:#7f1d1d;border:1px solid #fecaca;" onclick="vsDismissExpired()">Dismiss</button>';
-    } else { host.style.display = 'none'; }
-}
-setInterval(vsTick, 1000);
-
-// After "Start Video eKYC" on the language screen: ~10 s to assign an AI assistant, then show its profile, then begin.
-function vekycBeginAfterIntro(){
-    if (document.getElementById('vs-assign')) return;
-    var hi = (typeof _vekycLang !== 'undefined' && _vekycLang === 'hi');
-    var gender = Math.random() < 0.5 ? 'female' : 'male';
-    var pool = VEKYC_I18N[_vekycLang].namePool[gender], name = pool[Math.floor(Math.random() * pool.length)];
-    var T = hi ? { t: '🎥 वीडियो eKYC की तैयारी', est: 'इस सेशन में लगभग <b>3–5 मिनट</b> लगेंगे।', asg: 'आपके लिए AI असिस्टेंट असाइन किया जा रहा है…', sec: 'सेकंड', done: 'आपका AI असिस्टेंट', st: 'सेशन शुरू हो रहा है…', c: 'रद्द करें' }
-                 : { t: '🎥 Preparing your Video eKYC', est: 'This session will take about <b>3–5 minutes</b>.', asg: 'Assigning an AI assistant for your session…', sec: 'seconds', done: 'Your AI assistant', st: 'Starting your session…', c: 'Cancel' };
-    var o = document.createElement('div'); o.id = 'vs-assign';
-    o.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,.72);z-index:9700;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;';
-    o.innerHTML = '<div style="background:#fff;border-radius:22px;padding:26px 22px;max-width:340px;width:100%;text-align:center;box-sizing:border-box;">' +
-        '<div style="font-weight:800;font-size:1rem;">' + T.t + '</div>' +
-        '<div style="font-size:.8rem;color:#475569;margin:8px 0 18px;line-height:1.5;">' + T.est + '</div>' +
-        '<div id="vs-asg-body"><div style="font-size:2.4rem;font-weight:800;color:#7c3aed;" id="vs-asg-n">10</div><div style="font-size:.7rem;color:#64748b;font-weight:700;">' + T.sec + '</div>' +
-        '<div style="background:#e2e8f0;border-radius:6px;height:8px;overflow:hidden;margin:12px 0;"><div id="vs-asg-bar" style="background:#7c3aed;height:100%;width:0;transition:width 1s linear;"></div></div>' +
-        '<div style="font-size:.78rem;font-weight:700;color:#334155;">' + T.asg + '</div>' +
-        '<button id="vs-asg-cancel" style="margin-top:14px;background:#f1f5f9;color:#334155;padding:9px 18px;border-radius:10px;font-weight:800;font-size:.76rem;">' + T.c + '</button></div></div>';
-    document.body.appendChild(o);
-    var n = 10; var bar = o.querySelector('#vs-asg-bar'); setTimeout(function(){ bar.style.width = '10%'; }, 30);
-    o.querySelector('#vs-asg-cancel').onclick = function(){ clearInterval(_vsAssignTimer); o.remove(); };
-    _vsAssignTimer = setInterval(function(){
-        n--; var el = o.querySelector('#vs-asg-n'); if (el) el.textContent = n; bar.style.width = ((10 - n) * 10) + '%';
-        if (n > 0) return;
-        clearInterval(_vsAssignTimer);
-        var bg = gender === 'male' ? 'linear-gradient(135deg,#bfdbfe,#93c5fd)' : 'linear-gradient(135deg,#ddd6fe,#c4b5fd)';
-        o.querySelector('#vs-asg-body').innerHTML = '<div style="width:92px;height:92px;border-radius:50%;margin:0 auto;background:' + bg + ';display:flex;align-items:center;justify-content:center;font-size:2.8rem;box-shadow:0 0 0 4px #fff,0 0 0 6px #ddd6fe;">' + (gender === 'male' ? '👨' : '👩') + '</div>' +
-            '<div style="font-size:.7rem;color:#64748b;font-weight:700;margin-top:12px;">' + T.done + '</div><div style="font-size:1.15rem;font-weight:800;color:#4c1d95;margin-top:2px;">' + name + '</div>' +
-            '<div style="font-size:.74rem;color:#64748b;margin-top:10px;">' + T.st + '</div>';
-        setTimeout(function(){ o.remove(); _vekycPreAssigned = { gender: gender, name: name }; _vekycBeginAfterIntroReal(); }, 2500);
-    }, 1000);
-}
 </script>
 </body>
 </html>
